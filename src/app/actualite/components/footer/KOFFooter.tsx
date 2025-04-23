@@ -1,5 +1,12 @@
 import { Separator } from "@/components/ui/separator";
 import React from "react";
+import { go3v2 } from "../../font";
+
+const GradientSeparator = () => {
+  return (
+    <div className="w-full h-[4px] bg-gradient-to-r from-transparent via-white to-transparent" />
+  );
+};
 
 export const FooterLight = () => {
   // Footer navigation links data
@@ -46,10 +53,10 @@ export const FooterLight = () => {
                     />
                   </div>
                 </div>
-                <div className="bg-[url(/group-1.png)] relative w-[360px] h-[272.9px] bg-[100%_100%]" />
-                <div className="bg-[url(/group-2.png)] relative w-[360px] h-[272.9px] bg-[100%_100%]" />
-                <div className="bg-[url(/group-3.png)] relative w-[360px] h-[272.9px] bg-[100%_100%]" />
-                <div className="bg-[url(/group-4.png)] relative w-[360px] h-[272.9px] bg-[100%_100%]" />
+                <div className=" relative w-[360px] h-[272.9px] bg-[100%_100%]" />
+                <div className=" relative w-[360px] h-[272.9px] bg-[100%_100%]" />
+                <div className=" relative w-[360px] h-[272.9px] bg-[100%_100%]" />
+                <div className=" relative w-[360px] h-[272.9px] bg-[100%_100%]" />
                 <div className="relative w-[360px] h-[272.9px] overflow-hidden">
                   <div className="relative h-[273px]">
                     <img
@@ -68,11 +75,13 @@ export const FooterLight = () => {
                     <div className="relative self-stretch mt-[-1.00px] [font-family:'Rockwell_Extra_Bold-Regular',Helvetica] font-normal text-white text-[26.6px] tracking-[0] leading-[normal]">
                       K-MER OTAKU
                     </div>
-                    <div className="relative self-stretch -mt-2 [font-family:'Gang_of_Three-Regular',Helvetica] font-normal text-white text-[26.6px] tracking-[0] leading-[normal]">
+                    <div
+                      className={`${go3v2.className} relative self-stretch -mt-2 font-normal text-white text-[26.6px] tracking-[0] leading-[normal]`}
+                    >
                       FESTIVAL
                     </div>
                   </div>
-                  <Separator className="bg-white h-1" />
+                  <GradientSeparator />
                 </div>
                 <p className="leading-5 relative self-stretch [font-family:'Satoshi-Regular',Helvetica] font-normal text-white text-base tracking-[0]">
                   Le plus grand évànement de la pop culture camerounaise.
@@ -90,14 +99,14 @@ export const FooterLight = () => {
                     <div className="relative self-stretch [font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-xl tracking-[0] leading-[normal]">
                       {section.title}
                     </div>
-                    <Separator className="bg-white h-1" />
+                    <GradientSeparator />
                   </div>
                   <nav className="flex flex-col w-[159px] items-start gap-2 relative flex-[0_0_auto]">
                     {section.links.map((link, i) => (
                       <a
                         key={i}
                         href="#"
-                        className={`relative self-stretch [font-family:'Satoshi-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-[normal] ${
+                        className={`[font-family:'Satoshi-Regular',Helvetica] relative self-stretch  font-normal text-white text-base tracking-[0] leading-[normal] ${
                           i === 0 ? "mt-[-1.00px]" : ""
                         }`}
                       >

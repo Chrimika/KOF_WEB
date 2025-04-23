@@ -15,3 +15,11 @@ export const wildwolf = localFont({
   display: "swap",
   variable: "--font-wild-wolf",
 });
+
+export const go3v2 = localFont({
+  src: "../../../public/fonts/go3v2.ttf",
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  variable: "--font-go3v2",
+});
