@@ -7,3 +7,11 @@ export const rockwell = localFont({
   display: "swap",
   variable: "--font-rockwell",
 });
+
+export const wildwolf = localFont({
+  src: "../../../public/fonts/Wild-Wolf.ttf",
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  variable: "--font-wild-wolf",
+});
