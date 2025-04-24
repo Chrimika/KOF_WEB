@@ -3,6 +3,7 @@ import SubHeader from "./components/tentacules/subHeader";
 import { ArticleCard } from "./components/ActualityCard";
 import { ToTheFestivalSection } from "./components/footer/toThefestivalSection";
 import { FooterLight } from "./components/footer/KOFFooter";
+import { rockwell } from "./font";
 
 const IMAGE_LIST = [
   {
@@ -49,7 +50,12 @@ const Actualite = (props: Props) => {
   return (
     <>
       <SubHeader />
-      <div className="h-full w-full bg-[#FF8C00] p-[55px] grid grid-cols-3 gap-4 mt-25">
+      <div
+        className={
+          rockwell.className +
+          " h-full w-full bg-[#FF8C00] p-[55px] grid grid-cols-3 gap-4 mt-25"
+        }
+      >
         {IMAGE_LIST.map((image, index) => (
           <ArticleCard key={index} src={image.src} title={image.title} />
         ))}

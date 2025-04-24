@@ -23,3 +23,10 @@ export const go3v2 = localFont({
   display: "swap",
   variable: "--font-go3v2",
 });
+
+export const satoshi = localFont({
+  src: "../../../public/fonts/Satoshi.otf",
+  style: "normal",
+  display: "swap",
+  variable: "--font-satoshi",
+});
