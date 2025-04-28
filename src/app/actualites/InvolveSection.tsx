@@ -75,17 +75,17 @@ const NewsletterForm = () => {
 
   return (
     <form className="mt-12 lg:mt-[10vmax] max-w-md mx-auto">
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row gap-0 mx-10">
         <input
           type="email"
           placeholder="Votre Adresse Mail"
-          className="flex-grow px-4 py-3 lg:px-[4vmax] lg:py-[2vmax] border border-gray-300 rounded-lg"
+          className="flex-grow px-4 py-3 lg:px-[4vmax] lg:py-[2vmax] border border-gray-300 "
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <button
           type="submit"
-          className={`${rockwell.className} px-6 py-3 lg:px-[4vmax] lg:py-[2vmax] bg-[#0A1E00] text-[#FF0000] uppercase rounded-lg hover:bg-[#FF8C00] hover:text-[#0A1E00] transition-colors`}
+          className={`${rockwell.className} px-6 py-3 lg:px-[4vmax] lg:py-[2vmax] bg-[#0A1E00] text-[#FF0000] uppercase  hover:bg-[#FF8C00] hover:text-[#0A1E00] transition-colors `}
         >
           S'abonner
         </button>
