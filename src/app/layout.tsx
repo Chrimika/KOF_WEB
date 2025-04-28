@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { KOFHeader } from "./actualite/components/header/header";
 
 export default function RootLayout({
   children,
@@ -9,10 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <KOFHeader />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

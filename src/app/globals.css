@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
 
@@ -124,4 +125,39 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: "rockwell";
+  src: url("/font/ROCKEB.TTF");
+}
+
+@font-face {
+  font-family: "wild-wolf";
+  src: url("/font/WildWolf.ttf");
+}
+
+@font-face {
+  font-family: "satoshi";
+  src: url("/font/Satoshi-Variable.ttf");
+}
+
+@font-face {
+  font-family: "akira";
+  src: url("/font/Akira-Expanded.otf");
+}
+
+/* Animation du menu burger */
+#burger-menu.close hr:first-child {
+  transform: translate(0, -50%) rotate(405deg);
+  top: 50%;
+}
+
+#burger-menu.close hr:last-child {
+  transform: translate(0%, 50%) rotate(-405deg);
+  bottom: 50%;
+}
+
+#burger-menu.close img {
+  transform: translate(-50%, -50%) scale(0.5, 3);
 }
