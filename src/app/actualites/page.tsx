@@ -1,3 +1,4 @@
+import { FooterLight } from "../actualite/components/footer/KOFFooter";
 import ActualitesContent from "./ActualiteContent";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -11,6 +12,7 @@ export default function ActualitesPage() {
         <ActualitesContent />
         <InvolveSection />
       </main>
+      <FooterLight />
       <Footer />
     </div>
   );

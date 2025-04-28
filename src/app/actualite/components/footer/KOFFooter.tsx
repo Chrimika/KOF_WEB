@@ -36,7 +36,9 @@ export const FooterLight = () => {
   ];
 
   return (
-    <footer className={satoshi.className + " w-full max-w-[1920px]"}>
+    <footer
+      className={satoshi.className + " w-full max-w-[1920px] hidden lg:block"}
+    >
       <div className="relative h-[403px]">
         {/* Main footer content */}
         <div className="absolute w-full h-[403px] top-0 left-0">

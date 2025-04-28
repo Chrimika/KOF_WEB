@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mt-16 lg:mt-[5vmax]">
+    <footer className="mt-16 lg:mt-[5vmax] lg:hidden">
       <div className="relative bg-[#0A1E00] lg:bg-[#FF0000] px-6 lg:px-[12%] py-8 lg:py-[4vmax]">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
