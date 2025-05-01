@@ -1,3 +1,5 @@
+import { satoshi } from "../actualite/font";
+
 const Footer = () => {
   const navSections = [
     ["Programme", "Billeterie", "Actualités", "Infos. Pratiques"],
@@ -6,15 +8,8 @@ const Footer = () => {
     ["Média - Presse", "À Propos", "Organisation", "Contacter"],
   ];
 
-  const socials = [
-    "Youtube",
-    "Instagram",
-    "Facebook",
-    "Twitter",
-    "Whatsapp",
-    "Spotify",
-    "Twitch",
-  ];
+  const firstRowSocials = ["Youtube", "Instagram", "Facebook", "Twitter"];
+  const secondRowSocials = ["Whatsapp", "Spotify", "Twitch"];
 
   return (
     <footer className="mt-16 lg:mt-[5vmax] lg:hidden">
@@ -51,8 +46,25 @@ const Footer = () => {
       </div>
 
       <div className="py-6 lg:py-8 text-center">
-        <div className="flex justify-center space-x-4 lg:space-x-6">
-          {socials.map((social) => (
+        <div className="flex justify-around ">
+          {firstRowSocials.map((social, index) => (
+            <a
+              key={social}
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <img
+                src={`/icon/${social}.svg`}
+                alt={social}
+                className="h-6 w-6 lg:h-8 lg:w-8"
+              />
+            </a>
+          ))}
+        </div>
+        <div className="flex justify-around mt-5">
+          {secondRowSocials.map((social, index) => (
             <a
               key={social}
               href="#"
@@ -70,14 +82,16 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="pb-8 lg:pb-12 text-center text-xs lg:text-sm text-gray-600">
-        <p>
-          &copy; Copyright k-mer otaku festival 2023 | All rights reserved |
+      <div
+        className={`${satoshi.className} pb-8 lg:pb-12 text-center text-[7.83px] lg:text-sm text-gray-600`}
+      >
+        <pre>
+          &copy; Copyright k-mer otaku festival 2023 || All rights reserved ||
           Design by{" "}
           <a href="#" className="underline">
             Yoko
           </a>
-        </p>
+        </pre>
       </div>
     </footer>
   );
