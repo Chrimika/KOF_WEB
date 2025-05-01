@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-4 lg:top-[4vmin] w-full px-4 lg:px-[5%] py-3 lg:py-[3vh] flex justify-between items-center z-50">
+      <header className=" top-4 lg:top-[4vmin] w-full px-4 lg:px-[5%] py-3 lg:py-[3vh] flex justify-between items-center z-50">
         <a className="header-logo" href="#">
           <img
             src="/actualite/K-mer Otaku Festival Logo - White 1.png"
@@ -21,18 +21,18 @@ const Header = () => {
           aria-label="Menu"
         >
           <span
-            className={`absolute top-0 left-0 w-full h-1 bg-black transition-all ${
+            className={`block w-full h-5 hover:w-1/2 my-2 bg-black transition-all ${
               menuOpen ? "rotate-45 top-1/2" : ""
             }`}
           />
-          <span
-            className={`absolute top-1/2 left-0 w-full h-1 bg-black transition-all ${
-              menuOpen ? "opacity-0" : ""
-            }`}
+          <img
+            src="/img/asset/centerItemBurgerMenuOpener.png"
+            alt=""
+            className="w-full h-5"
           />
           <span
-            className={`absolute bottom-0 left-0 w-full h-1  bg-black transition-all ${
-              menuOpen ? "-rotate-45 top-1/2" : ""
+            className={` block w-full h-5 hover:w-1/2 my-2 bg-black transition-all ${
+              menuOpen ? "rotate-45 top-1/2" : ""
             }`}
           />
         </button>

@@ -30,10 +30,9 @@ const articles = [
 
 const ActualitesContent = () => {
   return (
-    <section className="bg-[#FF8C00] mt-16 lg:mt-[22.5vh] px-4 lg:px-[10%] pb-16 lg:pb-[20vh] overflow-hidden">
+    <section className="bg-[#FF8C00] mt-16 lg:mt-25 px-4 lg:px-auto pb-16 lg:pb-[20vh] overflow-hidden">
       <header className="h-64 lg:h-[32.5vw] scale-100 lg:scale-[1.27] translate-y-0 lg:translate-y-[7.5%] relative">
         {/* Outline layer 1 */}
-
         <MobileScreentitle />
         <img
           src="/img/asset/tentacle-top.svg"
