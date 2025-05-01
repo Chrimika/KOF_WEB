@@ -20,16 +20,20 @@ const Footer = () => {
     <footer className="mt-16 lg:mt-[5vmax] lg:hidden">
       <div className="relative bg-[#0A1E00] lg:bg-[#FF0000] px-6 lg:px-[12%] py-8 lg:py-[4vmax]">
         <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
-            <img
-              src="/img/group-logo-shaded.png"
-              alt="Logo"
-              className="h-16 lg:h-auto mb-8 lg:mb-0 lg:w-48"
-            />
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full lg:w-auto">
+          <div className="flex flex-col  justify-center items-center ">
+            <div className="h-20">
+              <img
+                src="/img/group-logo-shaded.png"
+                alt="Logo"
+                className="h-[213px] relative bottom-35"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-8 w-full px-10">
               {navSections.map((section, i) => (
-                <nav key={i} className="mb-6 lg:mb-0">
+                <nav
+                  key={i}
+                  className={"flex flex-col " + (i % 2 != 0 ? "items-end" : "")}
+                >
                   {section.map((item) => (
                     <a
                       key={item}
