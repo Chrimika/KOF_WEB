@@ -1,5 +1,8 @@
 "use client";
-import { Title } from "../actualite/components/title";
+import {
+  LargeScreenTitle,
+  MobileScreentitle,
+} from "../actualite/components/title";
 import { rockwell } from "../actualite/font";
 
 const articles = [
@@ -29,12 +32,9 @@ const ActualitesContent = () => {
   return (
     <section className="bg-[#FF8C00] mt-16 lg:mt-[22.5vh] px-4 lg:px-[10%] pb-16 lg:pb-[20vh] overflow-hidden">
       <header className="h-64 lg:h-[32.5vw] scale-100 lg:scale-[1.27] translate-y-0 lg:translate-y-[7.5%] relative">
-        <h3
-          className={`${rockwell.className} text-center pt-16 lg:pt-[9vmax] z-[9] text-[#0A1E00] uppercase text-5xl lg:text-[7.5vmax] m-0 leading-[0.9]`}
-        >
-          Actua<span>lités</span>
-        </h3>
+        {/* Outline layer 1 */}
 
+        <MobileScreentitle />
         <img
           src="/img/asset/tentacle-top.svg"
           alt="Tentacle top"

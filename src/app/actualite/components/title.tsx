@@ -3,42 +3,60 @@ import { rockwell } from "../font";
 
 type Props = {};
 
-export const Title = (props: Props) => {
+export const LargeScreenTitle = (props: Props) => {
   return (
-    <div
-      className="relative text-center uppercase leading-[100%] tracking-[0%]
- align-middle"
-    >
-      {/* Calque rouge/orange - décalé en bas à droite */}
-      <div
-        className={`${rockwell.className} absolute inset-0 font-extrabold text-[178.31px] text-[#D40000]`}
+    <h3 className="relative flex justify-center items-center pt-16 lg:pt-[9vmax] z-[9] uppercase text-5xl lg:text-[178px] leading-[0.9] tracking-widest">
+      {/* Outline layer 1 */}
+      <span
+        className={`${rockwell.className} absolute text-transparent`}
         style={{
-          transform: "translate(-16px, -19px)",
-          color: "transparent",
           WebkitTextStroke: "2px #0A1E00",
         }}
       >
-        ACTUALITE
-      </div>
+        <span className="relative left-[15px] top-[20px]">Actualités</span>
+      </span>
 
-      {/* Calque blanc - décalé en haut à gauche */}
-      <div
-        className={`${rockwell.className} absolute inset-0 font-extrabold text-[178.31px] text-amber-300 `}
+      {/* Outline layer 2 */}
+      <span
+        className={`${rockwell.className} absolute text-transparent`}
         style={{
-          transform: "translate(16px, 19px)",
-          color: "transparent",
           WebkitTextStroke: "2px #0A1E00",
         }}
       >
-        ACTUALITE
-      </div>
+        <span className="relative right-[10px] bottom-[27px]">Actualités</span>
+      </span>
 
-      {/* Calque principal noir foncé - centré */}
-      <div
-        className={`${rockwell.className} relative font-extrabold text-[178.31px] text-[#0A1E00]`}
+      {/* Filled layer */}
+      <span className={`${rockwell.className} text-[#0A1E00]`}>Actualités</span>
+    </h3>
+  );
+};
+
+export const MobileScreentitle = (props: Props) => {
+  return (
+    <div className="relative flex justify-center items-center pt-16  z-[9] uppercase text-5xl leading-[0.9] tracking-widest sm:hidden  w-full">
+      {/* Outline layer 1 */}
+      <span
+        className={`${rockwell.className} absolute text-transparent`}
+        style={{
+          WebkitTextStroke: "2px #0A1E00",
+        }}
       >
-        ACTUALITE
-      </div>
+        <span className="relative left-[4px] top-[5px]">Actualités</span>
+      </span>
+
+      {/* Outline layer 2 */}
+      <span
+        className={`${rockwell.className} absolute text-transparent`}
+        style={{
+          WebkitTextStroke: "2px #0A1E00",
+        }}
+      >
+        <span className="relative right-[4px] bottom-[5px]">Actualités</span>
+      </span>
+
+      {/* Filled layer */}
+      <span className={`${rockwell.className} text-[#0A1E00]`}>Actualités</span>
     </div>
   );
 };
