@@ -25,7 +25,7 @@ export default function Hero() {
       boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
       backgroundImage: `url("${backgroundImage}")`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
+      backgroundSize: 'contain',
       backgroundPosition: 'center'
     }}>
       {/* Contenu optionnel */}

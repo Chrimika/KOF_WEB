@@ -4,6 +4,8 @@ import Hero from "./hero";
 import Info from "./info";
 import Home from "./page";
 import Paragraphe from "./paragraphe";
+import Scan from "./Scan";
+import App from "./Scan";
 
 export default function RootLayout() { 
   return (
