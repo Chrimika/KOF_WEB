@@ -26,7 +26,7 @@ export default function Hero() {
       backgroundImage: `url("${backgroundImage}")`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
     }}>
       {/* Contenu optionnel */}
     </div>
