@@ -63,7 +63,7 @@
   
   .item {
     overflow: hidden;
-    border-radius: 10px; 
+    border-radius: 9px; 
     position: relative;
     opacity: 0; 
     transform: translateY(20px); 
