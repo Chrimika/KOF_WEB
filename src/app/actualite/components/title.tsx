@@ -5,7 +5,7 @@ type Props = {};
 
 export const LargeScreenTitle = (props: Props) => {
   return (
-    <h3 className="relative flex justify-center items-center pt-16 lg:pt-[9vmax] z-[9] uppercase text-5xl lg:text-[178px] leading-[0.9] tracking-widest">
+    <h3 className="hidden sm:flex relative justify-center items-center pt-16 sm:pt-[9vmax] z-[9] uppercase text-5xl sm:text-[178px] leading-[0.9] tracking-widest">
       {/* Outline layer 1 */}
       <span
         className={`${rockwell.className} absolute text-transparent`}

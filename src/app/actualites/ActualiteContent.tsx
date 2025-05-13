@@ -1,8 +1,5 @@
 "use client";
-import {
-  LargeScreenTitle,
-  MobileScreentitle,
-} from "../actualite/components/title";
+import { MobileScreentitle } from "../actualite/components/title";
 import { rockwell } from "../actualite/font";
 
 const articles = [
