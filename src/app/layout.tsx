@@ -25,7 +25,7 @@ export default function RootLayout() {
         <div style={{display:'flex',height:'100vh'}}>
           <Info />
         </div>
-        <div style={{display:'flex',height:'100vh'}}>
+        <div style={{display:'flex',height:'90vh'}}>
           <Galery />
         </div>
         <div style={{display:'flex',height:'100vh'}}>
