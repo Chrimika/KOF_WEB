@@ -12,7 +12,7 @@ const Footer = () => {
   const secondRowSocials = ["Whatsapp", "Spotify", "Twitch"];
 
   return (
-    <footer className="mt-16 lg:mt-[5vmax] lg:hidden">
+    <footer className="mt-16 lg:mt-[5vmax] lg:hidden w-100">
       <div className="relative bg-[#0A1E00] lg:bg-[#FF0000] px-6 lg:px-[10%] py-8 lg:py-[4vmax]">
         <div className="container mx-auto">
           <div className="flex flex-col  justify-center items-center ">
