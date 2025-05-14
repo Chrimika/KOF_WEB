@@ -20,22 +20,22 @@ export default function Home() {
           <Paragraphe />
           <FootHero />
         </div>
-        <div style={{display:'flex',height:'100vh'}}>
+        <div style={{display:'flex'}}>
           <Info />
         </div>
-        <div style={{display:'flex',height:'90vh'}}>
+        <div style={{display:'flex'}}>
           <Galery />
         </div>
-        <div style={{display:'flex',height:'40vh'}}>
+        <div style={{display:'flex'}}>
           <Partners />
         </div>
-        <div style={{display:'flex',height:'50vh'}}>
+        <div style={{display:'flex'}}>
           <Billet />
         </div>
-        <div style={{display:'flex',height:'30vh',margin:15}}>
+        <div style={{display:'flex',margin:15}}>
           <Countdown />
         </div>
-        <div style={{display:'flex',height:'80vh'}}>
+        <div style={{display:'flex',marginBottom:30}}>
           <NewsletterForm />
         </div>
         

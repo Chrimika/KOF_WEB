@@ -9,8 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex flex-col min-h-screen" style={{ padding: 0, margin: 0, display: 'flex', flexDirection: 'column' }}>
         <Header />
           {children}
-          <FooterLight />
-        <Footer />
+        <FooterLight />
       </body>
     </html>
   );
