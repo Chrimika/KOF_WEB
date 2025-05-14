@@ -32,7 +32,7 @@ export default function Home() {
         <div style={{display:'flex',height:'50vh'}}>
           <Billet />
         </div>
-        <div style={{display:'flex',height:'20vh',margin:15}}>
+        <div style={{display:'flex',height:'30vh',margin:15}}>
           <Countdown />
         </div>
         <div style={{display:'flex',height:'80vh'}}>

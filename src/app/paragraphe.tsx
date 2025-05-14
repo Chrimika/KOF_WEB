@@ -6,7 +6,7 @@ export default function Paragraphe() {
   return (
     <div className={inter.className} style={{
       backgroundColor: '#FF8C00',
-      flex: 0.2,
+      flex: 0.1,
       display: 'flex',
       alignItems: 'center',
       padding: '0 20px',

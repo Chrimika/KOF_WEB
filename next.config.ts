@@ -5,6 +5,7 @@ import path from 'path';
 const nextConfig: NextConfig = {
   // Configuration par défaut de Next.js
   reactStrictMode: true,  // Exemple d'option, tu peux la personnaliser selon tes besoins
+  trailingSlash: true,
   webpack: (config) => {
     // Ajouter l'alias '@' pour pointer vers le répertoire 'src'
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');

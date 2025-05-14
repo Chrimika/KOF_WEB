@@ -13,13 +13,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "/*": ["src/*"]  // Vérifie que ce chemin correspond à la structure de ton projet
+      "@/*": ["src/*"]  // Vérifie que ce chemin correspond à la structure de ton projet
     }
   },
   "include": [

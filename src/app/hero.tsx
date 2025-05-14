@@ -18,14 +18,14 @@ export default function Hero() {
 
   return (
     <div style={{
-      flex: 0.5,
+      flex: 1.7,
       height: 200,
       padding: '10px 40px',
       backgroundColor: '#FF8C00',
       boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
       backgroundImage: `url("${backgroundImage}")`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
+      backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}>
       {/* Contenu optionnel */}

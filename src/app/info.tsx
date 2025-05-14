@@ -16,15 +16,15 @@ export default function Info() {
     }}>
         <div style={{display:'flex',flex:1,justifyContent:'center',alignItems:'center',height:'100vh',flexDirection:'column'}}>
           <div style={{display:'flex', flex:0.8,width:'100%', alignItems:'center',justifyContent:'center',flexDirection:'column'}}>
-              <div style={{width:109, height:43,backgroundColor:'red',backgroundImage: `url("/assets/images/a.png")`,WebkitBackgroundSize:'contain'}}>
+              <div style={{width:200, height:65,backgroundColor:'red',backgroundImage: `url("/assets/images/a.png")`,WebkitBackgroundSize:'contain',backgroundPosition:'center'}}>
               </div>
-              <div style={{width:109, height:43,border:'1px solid white',marginTop:15,backgroundImage: `url("/assets/images/b.png")`,WebkitBackgroundSize:'contain'}}>
+              <div style={{backgroundColor:'gray',width:200, height:65,border:'1px solid white',marginTop:15,backgroundImage: `url("/assets/images/b.png")`,WebkitBackgroundSize:'contain',backgroundPosition:'center'}}>
                 
               </div>
-              <div style={{width:109, height:43,marginTop:15,backgroundImage: `url("/assets/images/c.png")`,WebkitBackgroundSize:'contain',border:'1px solid white'}}>
+              <div style={{backgroundColor:'gray',width:200, height:65,marginTop:15,backgroundImage: `url("/assets/images/c.png")`,WebkitBackgroundSize:'contain',border:'1px solid white',backgroundPosition:'center'}}>
                 
               </div>
-              <div style={{width:109, height:43,marginTop:15,backgroundImage: `url("/assets/images/d.png")`,WebkitBackgroundSize:'contain',border:'1px solid white'}}>
+              <div style={{backgroundColor:'gray',width:200, height:65,marginTop:15,backgroundImage: `url("/assets/images/d.png")`,WebkitBackgroundSize:'cover',border:'1px solid white',backgroundPosition:'center'}}>
                 
               </div>
           </div>
