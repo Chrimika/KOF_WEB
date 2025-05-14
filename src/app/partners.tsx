@@ -33,7 +33,7 @@ export default function Partners() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh',
+        height: '45vh',
       }}>
         {/* Bloc de titre ajouté au-dessus */}
         <div style={{ textAlign: 'center',justifyContent:'center',alignItems:'center',flex:0.3 }}>

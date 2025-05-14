@@ -44,15 +44,14 @@ export default function Countdown() {
 
   return (
     <div style={{
-      width: '60%',
+      width: '80%',
       border: '2px solid #000',
       padding: '20px',
       boxSizing: 'border-box',
       fontFamily: 'Satoshi, sans-serif',
-      margin: '20px 0',
+      margin: '20px auto',
       display: 'flex',
       justifyContent: 'center',
-      margin:'0 auto',
     }}>
       <div style={{
         display: 'flex',
