@@ -9,10 +9,6 @@ import ImageGrid from './components/ImageGrid';
 export default function GalleryPage() {
   return (
     <>
-      <Head>
-        <title>Gallery | K-MER OTAKU FESTIVAL</title>
-      </Head>
-      <Header />
       <main className={styles.main}>
         <h1 className={styles.bigTitle}>
           <span className={styles.faded}>K-MER OTAKU FESTIVAL</span>
@@ -20,7 +16,6 @@ export default function GalleryPage() {
         </h1>
         <ImageGrid />
       </main>
-      <Footer />
     </>
   );
 }
