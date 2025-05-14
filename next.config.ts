@@ -1,26 +1,13 @@
 import type { NextConfig } from "next";
+import path from 'path';
 
+// Définir la configuration Next.js
 const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-const path = require('path');
-
-interface WebpackConfig {
-  resolve: {
-    alias: {
-      [key: string]: string;
-    };
-  };
-}
-
-interface ModuleExports {
-  webpack: (config: WebpackConfig) => WebpackConfig;
-}
-
-const moduleExports: ModuleExports = {
+  // Configuration par défaut de Next.js
+  reactStrictMode: true,  // Exemple d'option, tu peux la personnaliser selon tes besoins
   webpack: (config) => {
-    config.resolve.alias['@'] = path.resolve(__dirname);
+    // Ajouter l'alias '@' pour pointer vers le répertoire 'src'
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     return config;
   },
 };
