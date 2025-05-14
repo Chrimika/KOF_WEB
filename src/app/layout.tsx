@@ -1,15 +1,4 @@
-import Billet from "./billet";
-import FootHero from "./foot-hero";
-import Galery from "./galery";
 import Header from "./header";
-import Hero from "./hero";
-import Info from "./info";
-import Home from "./page";
-import Paragraphe from "./paragraphe";
-import Partners from "./partners";
-import Countdown from "./Rebours";
-import Scan from "./Scan";
-import App from "./Scan";
 import './globals.css';
 import Footer from "./actualites/Footer";
 import { FooterLight } from "./actualite/components/footer/KOFFooter";

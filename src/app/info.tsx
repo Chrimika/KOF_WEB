@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import Image from "next/image";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,7 +38,7 @@ export default function Info() {
 
             </div>
             <div style={{padding:8,color:'white', fontSize:'0.7rem',lineHeight:1.7,fontWeight:'lighter'}}>
-              Le K-mer Otaku Festival (KOF) est un événement unique célébrant la culture otaku au Cameroun. Rassemblant les passionnés de bandes dessinées, d'anime, de jeux vidéo, et de cosplay, le KOF offre une expérience inoubliable pour tous les fans de la culture pop asiatique.
+              Le K-mer Otaku Festival (KOF) est un événement unique célébrant la culture otaku au Cameroun. Rassemblant les passionnés de bandes dessinées, d’anime, de jeux vidéo, et de cosplay, le KOF offre une expérience inoubliable pour tous les fans de la culture pop asiatique.
               Organisé par une équipe dévouée et passionnée, le KOF met en avant le savoir-faire local, en offrant un espace pour les artistes, les créateurs et les gamers afin de s’épanouir comme jamais auparavant. Le festival propose des compétitions, des ateliers, des conférences...
             </div>
             <div style={{display:'flex'}}>

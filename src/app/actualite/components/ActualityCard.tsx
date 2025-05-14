@@ -1,6 +1,7 @@
 import { PlayIcon } from "lucide-react";
 import React from "react";
 
+
 export const ArticleCard = ({ src, title }: { src: string; title: string }) => {
   return (
     <div className="w-[464px] h-[496px] mb-30">

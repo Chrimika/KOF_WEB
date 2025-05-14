@@ -1,4 +1,3 @@
-import { Separator } from "@/components/ui/separator";
 import React from "react";
 import { go3v2, rockwell, satoshi } from "../../font";
 

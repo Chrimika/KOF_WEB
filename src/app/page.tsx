@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Countdown from "./Rebours";
 import Billet from "./billet";
 import Partners from "./partners";
@@ -9,8 +8,8 @@ import Paragraphe from "./paragraphe";
 import Hero from "./hero";
 import Header from "./header";
 import NewsletterForm from "./InvolveSection"
-import { FooterLight } from "./actualite/components/footer/KOFFooter";
-import Footer from "./actualites/Footer";
+
+
 
 export default function Home() {
   return (

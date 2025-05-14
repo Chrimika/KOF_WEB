@@ -47,7 +47,7 @@ const Footer = () => {
 
       <div className="py-6 lg:py-8 text-center">
         <div className="flex justify-around ">
-          {firstRowSocials.map((social, index) => (
+          {firstRowSocials.map((social) => (
             <a
               key={social}
               href="#"
@@ -64,7 +64,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex justify-around mt-5">
-          {secondRowSocials.map((social, index) => (
+          {secondRowSocials.map((social) => (
             <a
               key={social}
               href="#"

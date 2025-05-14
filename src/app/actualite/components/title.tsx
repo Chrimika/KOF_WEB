@@ -1,9 +1,8 @@
 import React from "react";
 import { rockwell } from "../font";
 
-type Props = {};
 
-export const LargeScreenTitle = (props: Props) => {
+export const LargeScreenTitle = () => {
   return (
     <h3 className="hidden sm:flex relative justify-center items-center pt-16 sm:pt-[9vmax] z-[9] uppercase text-5xl sm:text-[178px] leading-[0.9] tracking-widest">
       {/* Outline layer 1 */}
@@ -32,7 +31,7 @@ export const LargeScreenTitle = (props: Props) => {
   );
 };
 
-export const MobileScreentitle = (props: Props) => {
+export const MobileScreentitle = () => {
   return (
     <div className="relative flex justify-center items-center pt-16  z-[9] uppercase text-5xl leading-[0.9] tracking-widest sm:hidden  w-full">
       {/* Outline layer 1 */}

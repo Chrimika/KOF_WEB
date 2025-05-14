@@ -1,9 +1,6 @@
 'use client';
 
-import Head from 'next/head';
 import styles from './styles/Galery.module.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import ImageGrid from './components/ImageGrid';
 
 export default function GalleryPage() {

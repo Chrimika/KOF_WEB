@@ -1,8 +1,5 @@
-import { FooterLight } from "../actualite/components/footer/KOFFooter";
 import { LargeScreenTitle } from "../actualite/components/title";
 import ActualitesContent from "./ActualiteContent";
-import Footer from "./Footer";
-import Header from "./Header";
 import InvolveSection from "./InvolveSection";
 
 export default function ActualitesPage() {
