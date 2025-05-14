@@ -32,10 +32,10 @@ export default function Home() {
         <div style={{display:'flex'}}>
           <Billet />
         </div>
-        <div style={{display:'flex',margin:15}}>
+        <div style={{display:'flex',margin:'15px 0'}}>
           <Countdown />
         </div>
-        <div style={{display:'flex',marginBottom:30}}>
+        <div style={{display:'flex',marginBottom:30,height:'100vh'}}>
           <NewsletterForm />
         </div>
         

@@ -29,7 +29,7 @@ const NewsletterForm = () => {
 
   return (
     <form className="mt-12 lg:mt-[10vmax] max-w-md mx-auto">
-      <div className="flex flex-col sm:flex-row gap-0 mx-10">
+      <div className="flex flex-col sm:flex-row gap-0">
         <input
           type="email"
           placeholder="Votre Adresse Mail"
