@@ -30,3 +30,20 @@ export const satoshi = localFont({
   display: "swap",
   variable: "--font-satoshi",
 });
+
+export const gloock = localFont({
+  src: "../../../public/fonts/Gloock-Regular.ttf",
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  variable: "--font-gloock",
+});
+
+export const volgarie = localFont({
+  src: "../../../public/fonts/Volgarie.ttf",
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  variable: "--font-volgarie",
+});
+

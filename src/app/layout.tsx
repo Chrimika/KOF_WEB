@@ -1,14 +1,20 @@
-import Header from "./header";
-import './globals.css';
-import Footer from "./actualites/Footer";
+// app/layout.tsx
 import { FooterLight } from "./actualite/components/footer/KOFFooter";
+import "./globals.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata = {
+  title: "Site principal",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html>
-      <body className="flex flex-col min-h-screen" style={{ padding: 0, margin: 0, display: 'flex', flexDirection: 'column' }}>
-        <Header />
-          {children}
+    <html lang="fr">
+      <body className="flex flex-col min-h-screen">
+        {children}
         <FooterLight />
       </body>
     </html>
