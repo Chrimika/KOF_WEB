@@ -41,7 +41,7 @@ const Billetterie = () => {
                   key={idx}
                   className="w-full max-w-full md:max-w-7xl bg-white overflow-hidden flex flex-col items-start"
                 >
-                  {/* Image au dessus */}
+                  
                   <div className="w-full flex justify-center mb-6 md:mb-8 px-2">
                     <img
                       src={img}
