@@ -31,7 +31,6 @@ export default function GalleryPage() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>GALLERY</h1>
       <section className={styles.galleryGrid}>
         {/* Ligne 1 */}
         <div className={`${styles.item} ${styles.col6}`} onClick={() => openModal('/gallery/18.png')}>

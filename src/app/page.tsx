@@ -15,7 +15,7 @@ export default function GalleryPage() {
       <Header />
       <main className={styles.main}>
         <h1 className={styles.bigTitle}>
-          <span className={styles.faded}>K-MER OTAKU FESTIVAL</span>
+          <span className={styles.festivalTitle}>K-MER OTAKU FESTIVAL</span>
           <span className={styles.gallery}>GALLERY</span>
         </h1>
         <ImageGrid />
