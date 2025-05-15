@@ -1,6 +1,4 @@
-"use client"
 
-import React, { useState } from 'react';
 import Image from 'next/image';
 import ProductGrid from './Produits';
 
@@ -27,7 +25,7 @@ const Store = () => {
                     <img
                  src='/assets/images/notice.svg'
                  alt='note'
-                />  Beneficiez d’une réduction de jusqu'à 40% sur tous vos articles acheter dans notre boutique avant et pendant le KOF - 3 semaines restantes                </p>
+                />  Beneficiez d’une réduction de jusqu&apos;à 40% sur tous vos articles acheter dans notre boutique avant et pendant le KOF - 3 semaines restantes                </p>
                  <img
                  src='/assets/images/commot.svg'
                  alt='note'

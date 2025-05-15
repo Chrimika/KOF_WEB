@@ -79,12 +79,12 @@ const Comite = () => {
           }}>
             <p style={{ marginBottom: '1rem' }}>
               Mis sur pieds en 2022, le K-MER OTAKI LEFSTIVAL est devenu une force majeure dans la promotion 
-              de la pop culture au Cameroun. Il se positionne comme un catalyseur d'innovation et de créativité 
-              et s'efforce de valoriser les acteurs culturels locaux souvent négligés, en créant une plateforme 
+              de la pop culture au Cameroun. Il se positionne comme un catalyseur dinnovation et de créativité 
+              et sefforce de valoriser les acteurs culturels locaux souvent négligés, en créant une plateforme 
               de visibilité nationale et internationale.
             </p>
             <p style={{ marginBottom: '1rem' }}>
-              En dynamisant les secteurs culturels et créatifs du Cameroun, le festival favorise ainsi l'unité, 
+              En dynamisant les secteurs culturels et créatifs du Cameroun, le festival favorise ainsi lunité, 
               le partage, et un dialogue interculturel enrichissant et aspire faire de la culture camerounaise 
               un épicentre de la modernité et de la Illustrant la richesse et la diversité de son héritage sur 
               la scène mondiale.

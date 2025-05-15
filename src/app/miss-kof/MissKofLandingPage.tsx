@@ -45,13 +45,3 @@ export default function MissKofLandingPage() {
   );
 }
 
-// Add this to your CSS
-const style = {
-  '.animate-shimmer': {
-    animation: 'shimmer 2s infinite',
-  },
-  '@keyframes shimmer': {
-    '0%': { transform: 'translateX(-100%)' },
-    '100%': { transform: 'translateX(100%)' }
-  }
-};

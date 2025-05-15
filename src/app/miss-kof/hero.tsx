@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Header from "./Header";
 import { gloock, volgarie } from "../actualite/font"; // adapte le chemin
 
 export default function MissKofHero() {
@@ -9,7 +8,7 @@ export default function MissKofHero() {
       className={`relative w-full h-screen text-white ${volgarie.variable} ${gloock.variable} font-[var(--font-volgarie)]`}
     >
       {/* Header transparent au-dessus */}
-      <Header />
+      
 
       {/* Background image */}
       <Image

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // pour l'icône burger
 
@@ -12,11 +11,9 @@ export default function Header() {
         
         {/* Logo */}
         <div className="flex items-center">
-          <Image
+          <img
             src="/assets/images/logo.png" // à adapter
             alt="Logo"
-            width={50}
-            height={50}
             className="object-contain"
           />
         </div>
@@ -25,15 +22,15 @@ export default function Header() {
         <nav className="hidden md:flex gap-10 text-lg font-light items-center">
           <a href="#" className="hover:underline">accueil</a>
           <a href="#" className="hover:underline">candidater</a>
-          <Image src="/assets/images/mid-icon.png" alt="center-icon" width={40} height={40} />
+          <img src="/assets/images/mid-icon.png" alt="center-icon" width={40} height={40} />
           <a href="#" className="hover:underline">actualités</a>
           <a href="#" className="hover:underline">boutique</a>
         </nav>
 
         {/* Icônes */}
         <div className="hidden md:flex gap-4 items-center">
-          <Image src="/assets/icons/cart.svg" alt="Panier" width={20} height={20} />
-          <Image src="/assets/icons/lang.svg" alt="Langue" width={20} height={20} />
+          <img src="/assets/icons/cart.svg" alt="Panier" width={20} height={20} />
+          <img src="/assets/icons/lang.svg" alt="Langue" width={20} height={20} />
         </div>
 
         {/* Burger mobile */}
@@ -52,8 +49,8 @@ export default function Header() {
           <a href="#" className="block">actualités</a>
           <a href="#" className="block">boutique</a>
           <div className="flex gap-3 mt-2">
-            <Image src="/assets/icons/cart.svg" alt="Panier" width={20} height={20} />
-            <Image src="/assets/icons/lang.svg" alt="Langue" width={20} height={20} />
+            <img src="/assets/icons/cart.svg" alt="Panier" width={20} height={20} />
+            <img src="/assets/icons/lang.svg" alt="Langue" width={20} height={20} />
           </div>
         </div>
       )}
