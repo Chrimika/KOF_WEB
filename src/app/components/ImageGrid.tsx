@@ -44,9 +44,25 @@ export default function GalleryPage() {
         </div>
 
         {/* Ligne 2 */}
-        <div className={`${styles.item} ${styles.col3} ${styles.stack}`} onClick={() => openModal('/gallery/22.png')}>
-          <Image src="/gallery/22.png" alt="Lamp" layout="responsive" width={250} height={150} />
-          <Image src="/gallery/117.png" alt="Flowers" layout="responsive" width={250} height={150} />
+        <div className={`${styles.item} ${styles.col3} ${styles.stack}`}>
+          <Image
+            src="/gallery/22.png"
+            alt="Lamp"
+            layout="responsive"
+            width={250}
+            height={150}
+            style={{ borderRadius: '16px', cursor: 'pointer' }}
+            onClick={() => openModal('/gallery/22.png')}
+          />
+          <Image
+            src="/gallery/117.png"
+            alt="Flowers"
+            layout="responsive"
+            width={250}
+            height={150}
+            style={{ borderRadius: '16px', cursor: 'pointer' }}
+            onClick={() => openModal('/gallery/117.png')}
+          />
         </div>
         <div className={`${styles.item} ${styles.col3} ${styles.tall}`} onClick={() => openModal('/gallery/143.png')}>
           <Image src="/gallery/143.png" alt="Leaf" width={250} height={300} style={{ height: '587px', width: '100%', objectFit: 'cover' }} />
@@ -56,13 +72,13 @@ export default function GalleryPage() {
         </div>
 
         {/* Ligne 3  */}
-        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/img.png')}>
+        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/18.png')}>
           <Image src="/gallery/18.png" alt="Plant 2" layout="responsive" width={250} height={150} />
         </div>
-        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/img.png')}>
+        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/20.png')}>
           <Image src="/gallery/20.png" alt="Plant 2" layout="responsive" width={250} height={150} />
         </div>
-        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/img.png')}>
+        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/21.png')}>
           <Image src="/gallery/21.png" alt="Plant 2" layout="responsive" width={250} height={150} />
         </div>
 
@@ -78,9 +94,25 @@ export default function GalleryPage() {
         </div>
 
         {/* Ligne 2 */}
-        <div className={`${styles.item} ${styles.col3} ${styles.stack}`} onClick={() => openModal('/gallery/22.png')}>
-          <Image src="/gallery/22.png" alt="Lamp" layout="responsive" width={250} height={150} />
-          <Image src="/gallery/117.png" alt="Flowers" layout="responsive" width={250} height={150} />
+        <div className={`${styles.item} ${styles.col3} ${styles.stack}`}>
+          <Image
+            src="/gallery/22.png"
+            alt="Lamp"
+            layout="responsive"
+            width={250}
+            height={150}
+            style={{ borderRadius: '16px', cursor: 'pointer' }}
+            onClick={() => openModal('/gallery/22.png')}
+          />
+          <Image
+            src="/gallery/117.png"
+            alt="Flowers"
+            layout="responsive"
+            width={250}
+            height={150}
+            style={{ borderRadius: '16px', cursor: 'pointer' }}
+            onClick={() => openModal('/gallery/117.png')}
+          />
         </div>
         <div className={`${styles.item} ${styles.col3} ${styles.tall}`} onClick={() => openModal('/gallery/143.png')}>
           <Image src="/gallery/143.png" alt="Leaf" width={250} height={300} style={{ height: '587px', width: '100%', objectFit: 'cover' }} />
@@ -90,13 +122,13 @@ export default function GalleryPage() {
         </div>
 
         {/* Ligne 3  */}
-        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/img.png')}>
+        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/18.png')}>
           <Image src="/gallery/18.png" alt="Plant 2" layout="responsive" width={250} height={150} />
         </div>
-        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/img.png')}>
+        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/20.png')}>
           <Image src="/gallery/20.png" alt="Plant 2" layout="responsive" width={250} height={150} />
         </div>
-        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/img.png')}>
+        <div className={`${styles.item} ${styles.col3}`} onClick={() => openModal('/gallery/21.png')}>
           <Image src="/gallery/21.png" alt="Plant 2" layout="responsive" width={250} height={150} />
         </div>
         
