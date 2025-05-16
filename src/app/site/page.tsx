@@ -13,32 +13,17 @@ import NewsletterForm from "./InvolveSection"
 
 export default function HomeScreen() {
   return (
-    <div>
-      <div style={{display:'flex',flexDirection:'column',height:'120vh' }}>
+    <div style={{backgroundColor:'#fff'}}>
           <Header />
           <Hero />
           <Paragraphe />
           <FootHero />
-        </div>
-        <div style={{display:'flex'}}>
           <Info />
-        </div>
-        <div style={{display:'flex'}}>
           <Galery />
-        </div>
-        <div style={{display:'flex'}}>
           <Partners />
-        </div>
-        <div style={{display:'flex'}}>
           <Billet />
-        </div>
-        <div style={{display:'flex',margin:'15px 0'}}>
           <Countdown />
-        </div>
-        <div style={{display:'flex',marginBottom:30,height:'100vh'}}>
-          <NewsletterForm />
-        </div>
-        
+          <NewsletterForm />    
     </div>
   );
 }

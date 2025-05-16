@@ -44,7 +44,7 @@ export default function Countdown() {
 
   return (
     <div style={{
-      width: '80%',
+      width: '70%',
       border: '2px solid #000',
       padding: '20px',
       boxSizing: 'border-box',
@@ -52,6 +52,7 @@ export default function Countdown() {
       margin: '20px auto',
       display: 'flex',
       justifyContent: 'center',
+      marginTop:100
     }}>
       <div style={{
         display: 'flex',

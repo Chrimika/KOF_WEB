@@ -4,7 +4,7 @@ import { rockwell, wildwolf } from "../actualite/font";
 
 const InvolveSection = () => {
   return (
-    <section className=" text-center">
+    <section className=" text-center" style={{marginBottom:150,marginTop:100}}>
 
       <h4
         className={`${wildwolf.className} text-4xl lg:text-[4.5em] mt-8 lg:mt-[5vmax] font-light`}

@@ -123,7 +123,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-     scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
@@ -163,4 +162,10 @@
 
 #burger-menu.close img {
   transform: translate(-50%, -50%) scale(0.5, 3);
+}
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

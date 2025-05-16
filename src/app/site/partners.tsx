@@ -33,7 +33,8 @@ export default function Partners() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '45vh',
+        height: isMobile ? '25vh':'40vh',
+        marginTop: isMobile ? '100px':''
       }}>
         {/* Bloc de titre ajouté au-dessus */}
         <div style={{ textAlign: 'center',justifyContent:'center',alignItems:'center',flex:0.3 }}>
@@ -48,7 +49,7 @@ export default function Partners() {
               backgroundImage: `url("/assets/images/underline.png")`,
               backgroundSize: 'contain',
               backgroundRepeat:'no-repeat',
-              margin: isMobile ? '-20px auto 0' : '-20px 0 0',
+              margin: isMobile ? '-37px auto 0' : '-35px 0 0',
               backgroundPosition:'center'
             }}></div>
         </div>

@@ -8,7 +8,7 @@ export default function Billet() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '40vh',
+        height: '20vh',
         backgroundImage: `url("/assets/images/billet.png")`,
         backgroundPosition:'center',
         backgroundRepeat:'no-repeat',
