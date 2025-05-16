@@ -1,29 +1,22 @@
-import Billet from "./billet";
-import FootHero from "./foot-hero";
-import Galery from "./galery";
-import Header from "./header";
-import Hero from "./hero";
-import Info from "./info";
-import Home from "./page";
-import Paragraphe from "./paragraphe";
-import Partners from "./partners";
-import Countdown from "./Rebours";
-import Scan from "./Scan";
-import App from "./Scan";
-import './globals.css';
-import Footer from "./actualites/Footer";
+// app/layout.tsx
 import { FooterLight } from "./actualite/components/footer/KOFFooter";
+import "./globals.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata = {
+  title: "Site principal",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html>
-      <body className="flex flex-col min-h-screen" style={{ padding: 0, margin: 0, display: 'flex', flexDirection: 'column' }}>
-        <Header />
-          {children}
-          <FooterLight />
-        <Footer />
+    <html lang="fr" style={{margin:0,padding:0,width:'100%'}}>
+      <body className="flex flex-col min-h-screen" style={{margin:0,padding:0,width:'100%'}}>
+        {children}
+        <FooterLight />
       </body>
     </html>
   );
 }
-

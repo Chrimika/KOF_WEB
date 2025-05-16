@@ -44,9 +44,8 @@ const IMAGE_LIST = [
   },
 ];
 
-type Props = {};
 
-const Actualite = (props: Props) => {
+const Actualite = () => {
   return (
     <>
       <SubHeader />

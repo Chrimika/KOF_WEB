@@ -1,9 +1,8 @@
 import React from "react";
-import { Title } from "../title";
 
-type Props = {};
 
-const SubHeader = (props: Props) => {
+
+const SubHeader = () => {
   return (
     <div className="relative mt-[400px]  w-screen h-fit">
       {/* Tentacule gauche, à gauche */}
@@ -26,8 +25,6 @@ const SubHeader = (props: Props) => {
         alt="tentacule droite"
         className="absolute right-0 bottom-[-100px] z-0 w-[376px] h-[248.99px] "
       />
-
-      <Title />
     </div>
   );
 };

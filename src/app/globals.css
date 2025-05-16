@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Vollkorn:wght@400;600&display=swap');
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -160,4 +162,10 @@
 
 #burger-menu.close img {
   transform: translate(-50%, -50%) scale(0.5, 3);
+}
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
