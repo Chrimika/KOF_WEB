@@ -1,6 +1,10 @@
+"use client"
+
+import { useRouter } from "next/navigation";
 import React from 'react'
 
 export default function Billet() {
+    const router = useRouter();
   return (
     <div style={{
         flex: 0.8,
@@ -15,7 +19,12 @@ export default function Billet() {
         backgroundSize:'contain',
         width:'100%',
         margin:'0 auto'
-      }}>
+        
+      }}
+      
+      onClick={() => {
+                router.push("/billeterie");
+              }}>
 
       </div>
   )
