@@ -39,14 +39,18 @@ const Billetterie = () => {
               b.titre === 'PASS KOF' ? (
                 <div
                   key={idx}
-                  className="w-full max-w-full md:max-w-7xl bg-white overflow-hidden flex flex-col items-start"
+                  className="w-full max-w-full md:max-w-7xl bg-white overflow-hidden flex flex-col items-start relative"
                 >
+                  {/* Animation Otaku - étoiles */}
+                  <div className="absolute left-4 top-4 animate-bounce-slow text-yellow-400 text-3xl select-none pointer-events-none z-10">★</div>
+                  <div className="absolute right-8 top-10 animate-spin-slow text-pink-400 text-2xl select-none pointer-events-none z-10">✦</div>
+                  <div className="absolute left-1/2 bottom-8 animate-wiggle text-blue-400 text-2xl select-none pointer-events-none z-10">☆</div>
                   
                   <div className="w-full flex justify-center mb-6 md:mb-8 px-2">
                     <img
                       src={img}
                       alt={`ticket ${b.titre}`}
-                      className="w-auto h-auto max-w-full max-h-[18rem] md:max-h-[32rem]"
+                      className="w-auto h-auto max-w-full max-h-[18rem] md:max-h-[32rem] hover:scale-105 transition-transform duration-500 ease-out"
                       style={{ background: 'none', boxShadow: 'none', borderRadius: 0 }}
                     />
                   </div>
@@ -84,12 +88,16 @@ const Billetterie = () => {
               ) : (
                 <div
                   key={idx}
-                  className="w-full max-w-full md:max-w-2xl bg-white overflow-hidden flex flex-col items-center"
+                  className="w-full max-w-full md:max-w-2xl bg-white overflow-hidden flex flex-col items-center relative"
                 >
+                  {/* Animation Otaku - étoiles */}
+                  <div className="absolute left-2 top-2 animate-bounce-slow text-yellow-400 text-xl select-none pointer-events-none z-10">★</div>
+                  <div className="absolute right-4 top-8 animate-spin-slow text-pink-400 text-lg select-none pointer-events-none z-10">✦</div>
+                  
                   <img
                     src={img}
                     alt={`ticket ${b.titre}`}
-                    className="mx-auto w-auto h-auto max-w-full max-h-[14rem] md:max-h-[28rem]"
+                    className="mx-auto w-auto h-auto max-w-full max-h-[14rem] md:max-h-[28rem] hover:rotate-3 hover:scale-105 transition-transform duration-500 ease-out"
                     style={{ background: 'none', boxShadow: 'none', borderRadius: 0 }}
                   />
                   <div className="p-4 md:p-8 w-full flex flex-col items-start text-left">
