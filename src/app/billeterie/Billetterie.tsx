@@ -33,7 +33,7 @@ const Billetterie = () => {
 
       {billets.map((b, i) => (
         <section key={i} className="p-2 md:p-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-8">{b.titre}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-left text-gray-800 mb-6 md:mb-8">{b.titre}</h2>
           <div className="flex flex-wrap justify-center gap-4 md:gap-10">
             {b.images.map((img, idx) => (
               b.titre === 'PASS KOF' ? (
