@@ -83,10 +83,10 @@ const Gallery = () => {
         alignItems: 'center',
         justifyContent: isMobile ? 'flex-start' : 'center',
         width: '100%',
-        height: isMobile ? '30vh' : '100vh',
+        height: isMobile ? '20vh' : '100vh',
         overflow: 'hidden',
         backgroundColor: '#fff',
-        padding: isMobile ? '1rem 0' : 0
+        padding: isMobile ? '1rem 0' : 0,
       }}
     >
       {/* Background Image */}
@@ -100,7 +100,8 @@ const Gallery = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: 0
+          zIndex: 0,
+          margin:'0 auto'
         }}
       >
         <img 
@@ -132,7 +133,8 @@ const Gallery = () => {
           animate="visible"
           style={{ 
             textAlign: 'center',
-            marginBottom: isMobile ? '0.5rem' : '2rem'
+            marginBottom: isMobile ? '0.5rem' : '2rem',
+
           }}
         >
           <motion.h1 
@@ -169,7 +171,8 @@ const Gallery = () => {
             width: '100%',
             padding: isMobile ? '0 0.5rem' : 0,
             overflowX: 'auto',
-            scrollSnapType: 'x mandatory'
+            scrollSnapType: 'x mandatory',
+            justifyContent:'center',
           }}
         >
           {galleryItems.map((item, index) => (
