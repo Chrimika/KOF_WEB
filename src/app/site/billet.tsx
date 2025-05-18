@@ -89,7 +89,7 @@ export default function Billet() {
                 overflow: 'hidden',
                 cursor: 'pointer',
                 borderRadius: '8px',
-                backgroundColor: '#FF8C00'
+                backgroundColor: isMobile ? 'transparent' : '#FF8C00'
             }}
             onClick={() => router.push("/billeterie")}
         >
