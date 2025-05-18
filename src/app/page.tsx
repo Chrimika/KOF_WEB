@@ -101,7 +101,7 @@ export default function Home() {
           zIndex: 1000,
           maxWidth: '300px'
         }}>
-          <p>Souhaitez-vous activer la musique d'ambiance ?</p>
+          <p>Souhaitez-vous activer la musique dambiance ?</p>
           <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
             <button 
               onClick={handleAllowAudio}
