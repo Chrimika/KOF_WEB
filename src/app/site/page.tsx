@@ -13,7 +13,6 @@ import Header from "./header";
 import NewsletterForm from "./InvolveSection";
 
 export default function HomeScreen() {
-  const [audioInitialized, setAudioInitialized] = useState(false);
   const [showAudioPrompt, setShowAudioPrompt] = useState(false);
 
   useEffect(() => {
@@ -75,7 +74,7 @@ export default function HomeScreen() {
           zIndex: 1000,
           maxWidth: '300px'
         }}>
-          <p>Souhaitez-vous activer la musique d'ambiance ?</p>
+          <p>Souhaitez-vous activer la musique dambiance ?</p>
           <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
             <button 
               onClick={handleAllowAudio}

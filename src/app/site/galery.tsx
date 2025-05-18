@@ -1,38 +1,45 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { Inter } from 'next/font/google'
-import { motion, useAnimation } from 'framer-motion'
+import { motion, useAnimation, Variants } from 'framer-motion'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Gallery() {
-  const [isMobile, setIsMobile] = useState(false);
-  const controls = useAnimation();
+interface GalleryItem {
+  src: string
+  alt: string
+}
+
+const Gallery = () => {
+  const [isMobile, setIsMobile] = useState(false)
+  const controls = useAnimation()
+
+  const checkScreenSize = useCallback(() => {
+    setIsMobile(window.innerWidth <= 768)
+  }, [])
 
   useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    // Vérification initiale
+    checkScreenSize()
 
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    // Configuration du debounce pour le resize
+    const debouncedResize = debounce(checkScreenSize, 100)
+    window.addEventListener('resize', debouncedResize)
 
     // Animation d'entrée
     controls.start({
       opacity: 1,
       y: 0,
       transition: { duration: 0.8 }
-    });
+    })
 
-    return () => {
-      window.removeEventListener('resize', checkScreenSize);
-    };
-  }, [controls]);
+    return () => window.removeEventListener('resize', debouncedResize)
+  }, [checkScreenSize, controls])
 
   // Configuration des animations
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -47,16 +54,22 @@ export default function Gallery() {
       boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
       transition: { duration: 0.3 }
     }
-  };
+  }
 
-  const titleVariants = {
+  const titleVariants: Variants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: { duration: 0.8 }
     }
-  };
+  }
+
+  const galleryItems: GalleryItem[] = [
+    { src: '/assets/images/Hallyu.png', alt: 'Hallyu' },
+    { src: '/assets/images/Costplay.png', alt: 'Costplay' },
+    { src: '/assets/images/MissKOF.png', alt: 'Miss KOF' }
+  ]
 
   return (
     <motion.div 
@@ -76,7 +89,7 @@ export default function Gallery() {
         padding: isMobile ? '1rem 0' : 0
       }}
     >
-      {/* Image de fond animée */}
+      {/* Background Image */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
@@ -92,7 +105,7 @@ export default function Gallery() {
       >
         <img 
           src="/assets/images/bgGallery.png" 
-          alt="Background" 
+          alt="Gallery background" 
           style={{
             width: '100%',
             height: isMobile ? '140%' : '120%',
@@ -102,19 +115,17 @@ export default function Gallery() {
         />
       </motion.div>
 
-      {/* Contenu principal */}
+      {/* Main Content */}
       <div style={{
         position: 'relative',
         zIndex: 1,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-between',
         width: '100%',
-        height: isMobile ? '100%' : 'auto',
         padding: isMobile ? '0.5rem 0' : 0
       }}>
-        {/* Titre avec animation */}
+        {/* Title Section */}
         <motion.div 
           variants={titleVariants}
           initial="hidden"
@@ -142,41 +153,28 @@ export default function Gallery() {
             transition={{ duration: 0.8, delay: 0.3 }}
             style={{
               width: isMobile ? '80%' : 350,
-              maxWidth: isMobile ? 300 : 'none',
               height: 8,
-              marginTop: -20,
-              backgroundImage: `url("/assets/images/underline.png")`,
-              backgroundSize: 'contain',
-              backgroundRepeat:'no-repeat',
               margin: isMobile ? '-5px auto 0' : '-10px 0 0',
-              backgroundPosition:'center',
+              background: 'url("/assets/images/underline.png") center/contain no-repeat',
               transformOrigin: 'left center'
             }}
           />
         </motion.div>
 
-        {/* Galerie avec animations */}
+        {/* Gallery Items */}
         <motion.div 
           style={{
             display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
             gap: isMobile ? '0.5rem' : '2rem',
             width: '100%',
-            padding: isMobile ? '0 0.5rem' : '0',
+            padding: isMobile ? '0 0.5rem' : 0,
             overflowX: 'auto',
-            scrollSnapType: 'x mandatory',
-            marginTop: isMobile ? '0' : '1rem',
+            scrollSnapType: 'x mandatory'
           }}
         >
-          {[
-            { src: '/assets/images/Hallyu.png', alt: 'Hallyu' },
-            { src: '/assets/images/Costplay.png', alt: 'Costplay' },
-            { src: '/assets/images/MissKOF.png', alt: 'Miss KOF' }
-          ].map((item, index) => (
+          {galleryItems.map((item, index) => (
             <motion.div 
-              key={index}
+              key={`gallery-item-${index}`}
               custom={index}
               variants={itemVariants}
               initial="hidden"
@@ -184,29 +182,22 @@ export default function Gallery() {
               whileHover="hover"
               style={{
                 flexShrink: 0,
-                width: isMobile ? '90px' : '191px',
-                height: isMobile ? '120px' : '257.5px',
-                backgroundImage: `url("${item.src}")`,
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
+                width: isMobile ? 90 : 191,
+                height: isMobile ? 120 : 257.5,
+                background: `url("${item.src}") center/contain no-repeat`,
                 scrollSnapAlign: 'center',
                 cursor: 'pointer',
-                borderRadius: '8px',
+                borderRadius: 8,
                 position: 'relative',
                 overflow: 'hidden'
               }}
             >
-              {/* Overlay au hover */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 style={{
                   position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
+                  inset: 0,
                   background: 'rgba(255, 140, 0, 0.6)',
                   display: 'flex',
                   alignItems: 'center',
@@ -214,8 +205,7 @@ export default function Gallery() {
                   color: 'white',
                   fontWeight: 'bold',
                   fontSize: isMobile ? '0.7rem' : '1rem',
-                  textAlign: 'center',
-                  padding: '10px'
+                  padding: 10
                 }}
               >
                 {item.alt.toUpperCase()}
@@ -227,3 +217,13 @@ export default function Gallery() {
     </motion.div>
   )
 }
+
+function debounce<T extends (...args: unknown[]) => void>(fn: T, delay: number) {
+  let timeoutId: NodeJS.Timeout
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => fn(...args), delay)
+  }
+}
+
+export default Gallery

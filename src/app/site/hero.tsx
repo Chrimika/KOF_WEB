@@ -115,7 +115,7 @@ export default function Hero() {
               maxWidth: '800px'
             }}
           >
-            L'événement otaku le plus attendu de l'année !
+            Lévénement otaku le plus attendu de lannée !
           </motion.p>
         </motion.div>
       </motion.div>
