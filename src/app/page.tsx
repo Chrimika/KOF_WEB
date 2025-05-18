@@ -1,56 +1,91 @@
 "use client"
+import { useEffect, useState, useRef } from "react"
+import HomeScreen from "./site/page"
 
-import { useEffect, useState } from "react";
-import HomeScreen from "./site/page";
+const audioTracks = [
+  '/assets/audios/Bunny.mp3',
+  '/assets/audios/OrbMovement.mp3',
+  '/assets/audios/DemonSlayer.mp3',
+  '/assets/audios/NarutoShippuden.mp3',
+  '/assets/audios/DragonBall.mp3'
+]
 
 export default function Home() {
-  const [showAudioPrompt, setShowAudioPrompt] = useState(false);
+  const [showAudioPrompt, setShowAudioPrompt] = useState(false)
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
-    // Vérifier si nous avons déjà l'autorisation
-    const audioPermission = localStorage.getItem('audioPermission');
+    const audioPermission = localStorage.getItem('audioPermission')
     
     if (audioPermission === 'granted') {
-      startBackgroundAudio();
+      startAudioPlaylist()
     } else {
-      // Montrer une demande d'autorisation après un court délai
       const timer = setTimeout(() => {
-        setShowAudioPrompt(true);
-      }, 2000);
+        setShowAudioPrompt(true)
+      }, 2000)
       
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
-  }, []);
 
-  const startBackgroundAudio = () => {
-    const backgroundAudio = new Audio('/assets/audios/Bunny.mp3');
-    backgroundAudio.volume = 0.3;
-    backgroundAudio.loop = true;
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current = null
+      }
+    }
+  }, [])
+
+  const startAudioPlaylist = () => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+    }
+
+    const audio = new Audio(audioTracks[currentTrackIndex])
+    audio.volume = 0.3
+    audio.loop = false
     
-    const playPromise = backgroundAudio.play();
+    audio.addEventListener('ended', handleTrackEnd)
+    
+    const playPromise = audio.play()
     
     if (playPromise !== undefined) {
       playPromise.catch(error => {
-        console.log("Erreur de lecture audio:", error);
-        setShowAudioPrompt(true);
-      });
+        console.log("Erreur de lecture audio:", error)
+        setShowAudioPrompt(true)
+      })
     }
     
-    // Stocker la référence audio si besoin de la contrôler plus tard
-    return backgroundAudio;
-  };
+    audioRef.current = audio
+  }
+
+  const handleTrackEnd = () => {
+    setCurrentTrackIndex(prev => {
+      const nextIndex = (prev + 1) % audioTracks.length
+      return nextIndex
+    })
+  }
+
+  useEffect(() => {
+    if (audioRef.current) {
+      startAudioPlaylist()
+    }
+  }, [currentTrackIndex])
 
   const handleAllowAudio = () => {
-    localStorage.setItem('audioPermission', 'granted');
-    setShowAudioPrompt(false);
-    startBackgroundAudio();
-  };
+    localStorage.setItem('audioPermission', 'granted')
+    setShowAudioPrompt(false)
+    startAudioPlaylist()
+  }
 
   const handleDenyAudio = () => {
-    localStorage.setItem('audioPermission', 'denied');
-    setShowAudioPrompt(false);
-  };
-
+    localStorage.setItem('audioPermission', 'denied')
+    setShowAudioPrompt(false)
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current = null
+    }
+  }
 
   return (
     <div>
@@ -66,7 +101,7 @@ export default function Home() {
           zIndex: 1000,
           maxWidth: '300px'
         }}>
-          <p>Souhaitez-vous activer la musique dambiance ?</p>
+          <p>Souhaitez-vous activer la musique d'ambiance ?</p>
           <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
             <button 
               onClick={handleAllowAudio}
@@ -97,7 +132,7 @@ export default function Home() {
           </div>
         </div>
       )}
-     <HomeScreen />
+      <HomeScreen />
     </div>
-  );
+  )
 }
