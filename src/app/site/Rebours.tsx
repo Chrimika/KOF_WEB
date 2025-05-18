@@ -3,12 +3,32 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Countdown() {
+
+  const [isMobile, setIsMobile] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 35,
     hours: 23,
     minutes: 47,
     seconds: 46
   });
+
+  useEffect(() => {
+      // Fonction pour vérifier la taille de l'écran
+      const checkScreenSize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+  
+      // Vérifier au chargement
+      checkScreenSize();
+  
+      // Ajouter un écouteur d'événement pour surveiller les changements de taille
+      window.addEventListener('resize', checkScreenSize);
+  
+      // Nettoyer l'écouteur d'événement lors du démontage
+      return () => {
+        window.removeEventListener('resize', checkScreenSize);
+      };
+    }, []);
 
   useEffect(() => {
     // Définir la date cible (35 jours, 23 heures, 47 minutes et 46 secondes à partir de maintenant)
@@ -44,7 +64,7 @@ export default function Countdown() {
 
   return (
     <div style={{
-      width: '80%',
+      width: isMobile ? '70%':'80%',
       border: '2px solid #000',
       padding: '20px',
       boxSizing: 'border-box',
