@@ -83,7 +83,7 @@ const Gallery = () => {
         alignItems: 'center',
         justifyContent: isMobile ? 'flex-start' : 'center',
         width: '100%',
-        height: isMobile ? '20vh' : '100vh',
+        height: isMobile ? '30vh' : '100vh',
         overflow: 'hidden',
         backgroundColor: '#fff',
         padding: isMobile ? '1rem 0' : 0,
