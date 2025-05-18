@@ -64,7 +64,7 @@ export default function Countdown() {
 
   return (
     <div style={{
-      width: isMobile ? '70%':'80%',
+      width: isMobile ? '85%':'80%',
       border: '2px solid #000',
       padding: '20px',
       boxSizing: 'border-box',
