@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState, useRef } from "react"
 import HomeScreen from "./site/page"
+import Scan from "./Scan/Scan"
 
 const audioTracks = [
   '/assets/audios/Bunny.mp3',
@@ -132,7 +133,7 @@ export default function Home() {
           </div>
         </div>
       )}
-      <HomeScreen />
+      <HomeScreen/>
     </div>
   )
 }

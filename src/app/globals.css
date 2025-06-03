@@ -126,6 +126,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: #fff !important;
+    color: #111 !important;
   }
 }
 
@@ -168,4 +170,12 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+body, html {
+  background: #fff !important;
+  --background: #fff !important;
+}
+:root {
+  --background: #fff !important;
 }

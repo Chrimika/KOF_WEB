@@ -35,7 +35,17 @@ export default function Scan() {
       backgroundColor: '#ffffff',
       margin: 0,
     }}>
-      <div ref={qrRef} style={{ position: 'relative', width: 256, height: 256 }}>
+      <div
+        ref={qrRef}
+        style={{
+          position: 'relative',
+          width: 256,
+          height: 256,
+          background: '#fff', // <-- Ajouté pour html2canvas
+          borderRadius: 16,
+          boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+        }}
+      >
         <QRCodeCanvas
           value={encodedUSSD}
           size={256}
@@ -61,7 +71,7 @@ export default function Scan() {
         />
       </div>
 
-      <button
+      {/* <button
         onClick={handleDownloadPDF}
         style={{
           marginTop: 20,
@@ -75,7 +85,7 @@ export default function Scan() {
         }}
       >
         Télécharger en PDF
-      </button>
+      </button> */}
     </div>
   );
 }

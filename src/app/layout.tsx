@@ -15,7 +15,6 @@ export default function RootLayout({
     <html lang="fr" style={{margin:0,padding:0,width:'100%'}}>
       <body className="flex flex-col min-h-screen" style={{margin:0,padding:0,width:'100%'}}>
         {children}
-        <FooterLight />
       </body>
     </html>
   );
