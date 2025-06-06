@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+// import html2canvas from "html2canvas";
+// import jsPDF from "jspdf";
 // import { Download } from "lucide-react";
 
 const SYNTAX = {

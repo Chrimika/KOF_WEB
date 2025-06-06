@@ -10,20 +10,20 @@ export default function Scan() {
   const ussdCode = '#150*14*264831*693057569#';
   const encodedUSSD = 'tel:' + encodeURIComponent(ussdCode);
 
-  const handleDownloadPDF = async () => {
-    if (!qrRef.current) return;
+  // const handleDownloadPDF = async () => {
+  //   if (!qrRef.current) return;
 
-    const canvas = await html2canvas(qrRef.current);
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF({
-      orientation: 'portrait',
-      unit: 'mm',
-      format: [80, 100], // Taille personnalisée
-    });
+  //   const canvas = await html2canvas(qrRef.current);
+  //   const imgData = canvas.toDataURL('image/png');
+  //   const pdf = new jsPDF({
+  //     orientation: 'portrait',
+  //     unit: 'mm',
+  //     format: [80, 100], // Taille personnalisée
+  //   });
 
-    pdf.addImage(imgData, 'PNG', 10, 10, 60, 60); // position et taille dans le PDF
-    pdf.save('QR-Code-OrangeMoney.pdf');
-  };
+  //   pdf.addImage(imgData, 'PNG', 10, 10, 60, 60); // position et taille dans le PDF
+  //   pdf.save('QR-Code-OrangeMoney.pdf');
+  // };
 
   return (
     <div style={{
