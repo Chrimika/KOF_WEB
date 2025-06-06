@@ -1,5 +1,5 @@
 // app/layout.tsx
-import { FooterLight } from "./actualite/components/footer/KOFFooter";
+// import { FooterLight } from "./actualite/components/footer/KOFFooter";
 import "./globals.css";
 
 export const metadata = {

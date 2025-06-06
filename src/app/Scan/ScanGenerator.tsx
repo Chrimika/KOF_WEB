@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import { Download } from "lucide-react";
+// import { Download } from "lucide-react";
 
 const SYNTAX = {
   OM: "#150*14*{CODE}*{NUMERO}#",
@@ -28,27 +28,27 @@ export default function ScanGenerator({
 
   const encodedUSSD = "tel:" + encodeURIComponent(syntax);
 
-  const handleDownloadPDF = async () => {
-    if (!qrRef.current) return;
-    // Sauvegarde l'ancien fond du body
-    const oldBg = document.body.style.background;
-    document.body.style.background = "#fff";
-    const canvas = await html2canvas(qrRef.current);
-    // Restaure l'ancien fond du body
-    document.body.style.background = oldBg;
-    const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF({
-      orientation: "portrait",
-      unit: "mm",
-      format: [80, 100],
-    });
-    pdf.addImage(imgData, "PNG", 10, 10, 60, 60);
-    // Branding en bas à gauche
-    pdf.setFontSize(10);
-    pdf.setTextColor("#888");
-    pdf.text("qr.cm", 12, 75);
-    pdf.save(`QR-Code-${mode}.pdf`);
-  };
+  // const handleDownloadPDF = async () => {
+  //   if (!qrRef.current) return;
+  //   // Sauvegarde l'ancien fond du body
+  //   const oldBg = document.body.style.background;
+  //   document.body.style.background = "#fff";
+  //   const canvas = await html2canvas(qrRef.current);
+  //   // Restaure l'ancien fond du body
+  //   document.body.style.background = oldBg;
+  //   const imgData = canvas.toDataURL("image/png");
+  //   const pdf = new jsPDF({
+  //     orientation: "portrait",
+  //     unit: "mm",
+  //     format: [80, 100],
+  //   });
+  //   pdf.addImage(imgData, "PNG", 10, 10, 60, 60);
+  //   // Branding en bas à gauche
+  //   pdf.setFontSize(10);
+  //   pdf.setTextColor("#888");
+  //   pdf.text("qr.cm", 12, 75);
+  //   pdf.save(`QR-Code-${mode}.pdf`);
+  // };
 
   return (
     <div style={{flex:1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", backgroundColor: "#fff"}}>
