@@ -8,7 +8,7 @@ import { QRCodeCanvas } from "qrcode.react";
 
 const SYNTAX = {
   OM: "#150*14*{CODE}*{NUMERO}#",
-  MOMO: "#126*1*{CODE}*{NUMERO}#",
+  MOMO: "#126*14*{NUMERO}#",
 };
 
 export default function ScanGenerator({
